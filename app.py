@@ -35,9 +35,9 @@ if 'user_img' not in st.session_state:
 # Sidebar for configuration
 with st.sidebar:
     st.title("Configuration")
-    template_root = st.text_input("Template Folder Path", "Profile_Templates")
-    excel_path = st.text_input("Excel File Path", "Profile_Specifications.xlsx")
-    pdf_folder = st.text_input("PDF Folder Path", "data")
+    template_root = st.text_input("training_data", "Profile_Templates")
+    excel_path = st.text_input("data.xlsx", "Profile_Specifications.xlsx")
+    pdf_folder = st.text_input("data", "data")
     
     # Initialize matcher
     matcher = ProfileMatcher(template_root, excel_path, pdf_folder)
